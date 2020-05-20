@@ -1,0 +1,11 @@
+com\products\app\ProductApp.class
+com\products\app\IndexController.class
+com\products\app\serviceImpl\ProductServiceImpl.class
+com\products\app\controller\ProductController.class
+com\products\app\multipart\ResourceConfig.class
+com\products\app\repository\ProductRepository.class
+com\products\app\modal\Product.class
+com\products\app\modal\Category.class
+com\products\app\repository\CategoryRepository.class
+com\products\app\service\ProductService.class
+com\products\app\response\MessageResponse.class

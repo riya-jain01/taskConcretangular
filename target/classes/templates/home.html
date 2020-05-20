@@ -1,0 +1,48 @@
+<html xmlns:th="https://thymeleaf.org">   
+<head>
+<title>Home Page</title>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" 
+integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="api.js"></script>
+</head>
+<body>
+<h1>Hello !</h1>
+
+
+<p>Welcome to <span th:text="${appName}">Our App</span></p>
+
+<form method="POST" name="userForm">    
+<table>    
+<tr>    
+<td><label for="name">Product Name</label></td>    
+<td><input type="text" id="name" name="name"/></td>    
+</tr>     
+<tr>    
+<td><label for="color">Colour</label></td>    
+<td><input type="text" id="color" name="color"></input></td>    
+</tr>  
+<tr>    
+<td><label for="price">Price</label></td>    
+<td><input type="text" id="price" name="price"></input></td>    
+ </tr> 
+ <tr> 
+<td><label for="category">Select Category</label></td> 
+ <td th:object="${category}">
+    <select class="form-control" id="category" name="category">
+        <option value="">Select Category</option>
+        <option th:each="cat : ${category}"
+                th:value="${cat.cId}"
+                th:text="${cat.name}"></option>
+    </select>
+</td>  
+</tr>
+<tr>    
+<td></td>    
+<td><input type="button" value="Submit" onclick="onSubmit(); return false;" /></td>    
+</tr>    
+</table>    
+</form> 
+     
+</body>
+</html>
